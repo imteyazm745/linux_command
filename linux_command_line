@@ -6,7 +6,7 @@
 
 ## 02_03 - Write commands in a shell at the prompt
 
-`ls`
+`ls` 
 
 `ls -l`
 
@@ -202,7 +202,7 @@
 
 `bash test.sh`
 
-`cat test.sh`
+`cat test.sh`  This command will display all contents of the file selected.
 
 `chmod u-r test.sh`
 
@@ -434,13 +434,13 @@
 
 ## 05_02 - Find system hardware and disk information
 
-`free -h`
+`free -h` The free command shows how much memory is available and how much is used in human readable format.
 
 `cat /proc/cpuinfo`
 
 `lscpu`
 
-`df -h`
+`df -h` The -h option shows the numbers in a human-friendly format.
 
 `sudo du -hd1 /`
 
