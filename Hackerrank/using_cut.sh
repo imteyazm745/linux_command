@@ -19,3 +19,7 @@ cut -c 2,7 #it will print 2nd and the 7th character from each line of text.
 
 #Solution
 cut -c 2-7
+
+#4. Display the first four characters from each line of text.
+cut -c 1-4
+
