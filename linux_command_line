@@ -1,4 +1,6 @@
 # Commands used in __Learning Linux Command Line__ from LinkedIn Learning
+#We can write multi-line comments in bash scripting by enclosing the comments between <<COMMENT and COMMENT.
+#We can also write multi-line comments by enclosing the comments between (: ') and single quote (').
 
 ## 01_01 - Creating a Linux virtual machine
 
