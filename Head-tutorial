@@ -5,9 +5,14 @@ head : suntax = head [OPTION]... [FILE]...
 Head options 
 -n = --lines = prints the first 'num' lines instead of first 10 lines. num is mandatory otherwise it displays an error.
 example = head -n 3 = it will display first 3 lines
+ex2 = head -n -5 It will print everything except the last 5 lines
 -c = --bytes = prints the first 'num' bytes from the file specified.
 example = head -c 6 = it will print first 6 characters
--q = --quiet
+-q = --quiet it will print without the header.
 -v = --verbose = by using this option, data from the specified file is always preceded by its file name.
  The head command can be piped with other commands.
- -
+ In the following example the output of the ls command is piped to head to show only the three most recently modified files or folders.
+ cut three most recently used file.
+ $ ls -t | head -n 3
+ for more information type 
+ man head = it will give the brief description about the head 
