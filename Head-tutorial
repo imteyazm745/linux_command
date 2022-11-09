@@ -1,0 +1,11 @@
+Head command as the name implies, print the top N number of data of the given input.
+By default it prints the first 10 lines of the specified files.
+If more than one file name is provided then data from each file is preceded by its file name.
+head : suntax = head [OPTION]... [FILE]...
+Head options 
+-n = --lines = prints the first 'num' lines instead of first 10 lines. num is mandatory otherwise it displays an error.
+example = head -n 3 = it will display first 3 lines
+-c = --bytes = prints the first 'num' bytes from the file specified.
+example = head -c 6 = it will print first 6 characters
+-q = --quiet
+-v = --verbose = by using this option, data from the specified file is always preceded by its file name.
