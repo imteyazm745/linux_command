@@ -1,0 +1,172 @@
+Sort command is helpful to sort/order lines in text files. You can sort the data in text file and display the output on the screen, or redirect it to a file. Based on your requirement, sort provides several command line options for sorting data in a text file.
+
+Sort Command Syntax:
+
+$ sort [-options]
+
+For example, here is a test file:
+
+$ cat test
+zzz
+sss
+qqq
+aaa
+BBB
+ddd
+AAA
+And, here is what you get when sort command is executed on this file without any option. It sorts lines in test file and displays sorted output.
+
+$ sort test
+aaa
+AAA
+BBB
+ddd
+qqq
+sss
+zzz
+
+1. Perform Numeric Sort using -n option
+If we want to sort on numeric value, then we can use -n or –numeric-sort option.
+
+Create the following test file for this example:
+
+$ cat test
+22 zzz
+33 sss
+11 qqq
+77 aaa
+55 BBB
+The following sort command sorts lines in test file on numeric value in first word of line and displays sorted output.
+
+$ sort -n test
+11 qqq
+22 zzz
+33 sss
+55 BBB
+77 aaa
+
+2. Sort Human Readable Numbers using -h option
+If we want to sort on human readable numbers (e.g., 2K 1M 1G), then we can use -h or –human-numeric-sort option.
+
+Create the following test file for this example:
+
+$ cat test
+2K
+2G
+1K
+6T
+1T
+1G
+2M
+The following sort command sorts human readable numbers (i.e 1K = 1 Thousand, 1M = 1 Million, 1G = 1 Giga, 1T = 1 Tera) in test file and displays sorted output.
+
+$ sort -h test
+1K
+2K
+2M
+1G
+2G
+1T
+6T
+
+3. Sort Months of an Year using -M option
+If we want to sort in the order of months of year, then we can use -M or –month-sort option.
+
+Create the following test file for this example:
+
+$ cat test
+sept
+aug
+jan
+oct
+apr
+feb
+mar11
+The following sort command sorts lines in test file as per month order. Note, lines in file should contain at least 3 character name of month name at start of line (e.g. jan, feb, mar). If we will give, ja for January or au for August, then sort command would not consider it as month name.
+
+$ sort -M test
+jan
+feb
+mar11
+apr
+aug
+sept
+oct
+
+4. Check if Content is Already Sorted using -c option
+If we want to check data in text file is sorted or not, then we can use -c or –check, –check=diagnose-first option.
+
+Create the following test file for this example:
+
+$ cat test
+2
+5
+1
+6
+The following sort command checks whether text file data is sorted or not. If it is not, then it shows first occurrence with line number and disordered value.
+
+$ sort -c test
+sort: test:3: disorder: 1
+
+5. Reverse the Output and Check for Uniqueness using -r and -u options
+If we want to get sorted output in reverse order, then we can use -r or –reverse option. If file contains duplicate lines, then to get unique lines in sorted output, “-u” option can be used.
+
+Create the following test file for this example:
+
+$ cat test
+5
+2
+2
+1
+4
+4
+The following sort command sorts lines in test file in reverse order and displays sorted output.
+
+$ sort -r test
+5
+4
+4
+2
+2
+1
+The following sort command sorts lines in test file in reverse order and removes duplicate lines from sorted output.
+
+$ sort -r -u test
+5
+4
+2
+1
+
+6. Selectively Sort the Content, Customize delimiter, Write output to a file using  -k, -t, -o options
+If we want to sort on the column or word position in lines of text file, then “-k” option can be used. If we each word in each line of file is separated by delimiter except ‘space’, then we can specify delimiter using “-t” option. We can get sorted output in any specified output file (using “-o” option) instead of displaying output on standard output.
+
+Create the following test file for this example:
+
+$ cat test
+aa aa zz
+aa aa ff
+aa aa tt
+aa aa kk
+
+The following sort command sorts lines in test file on the 3rd word of each line and displays sorted output.
+
+$ sort -k3 test
+aa aa ff
+aa aa kk
+aa aa tt
+aa aa zz
+$ cat test
+aa|5a|zz
+aa|2a|ff
+aa|1a|tt
+aa|3a|kk
+Here, several options are used altogether. In test file, words in each line are separated by delimiter ‘|’. It sorts lines in test file on the 2nd word of each line on the basis of numeric value and stores sorted output into specified output file.
+
+$ sort -n -t'|' -k2 test -o outfile
+The contents of output file are shown below.
+
+$ cat outfile
+aa|1a|tt
+aa|2a|ff
+aa|3a|kk
+aa|5a|zz
