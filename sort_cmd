@@ -1,3 +1,14 @@
+The sort command is frequently used for sorting input in text or TSV formats in various different ways. 
+These ways may be either lexicographical, case insensitive, based on the numeric field only, based on a particular column, etc.
+
+Sort Options
+
+The vanilla sort command simply sorts the lines of the input file in lexicographical order.
+The -n option sorts the file on the basis of the numeric fields available if the first word or column in the file is a number.
+The -r option reverses the sorting order to either the reverse of the usual lexicographical ordering or descending order while sorting in numerical mode.
+The -k option is useful while sorting a table of data (tsv, csv etc.) based on a specified column (or columns).
+The -t option is used while specifying a delimiter in a particular file where columns are separated by tabs, spaces, pipes etc.
+
 Sort command is helpful to sort/order lines in text files. You can sort the data in text file and display the output on the screen, or redirect it to a file. Based on your requirement, sort provides several command line options for sorting data in a text file.
 
 Sort Command Syntax:
