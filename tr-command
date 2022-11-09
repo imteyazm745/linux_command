@@ -30,6 +30,8 @@ $ tr '{}' '()' < inputfile > outputfile
 $ echo "This is for testing" | tr [:space:] '\t'
 This	is	for	testing
 
+4. Squeeze repetition of characters using -s
+
 if there are two are more spaces present continuously, then the previous command will translate each spaces to a tab as follows.
 
 $ echo "This   is   for testing" | tr [:space:] '\t'
@@ -44,6 +46,34 @@ Similarly we can convert multiple continuous spaces with a single space
 
 $ echo "This  is  for testing" | tr -s [:space:] ' '
 This is for testing
+ 
+5. Delete specified characters using -d option
+tr can also be used to remove particular characters using -d option.
+
+$ echo "the geek stuff" | tr -d 't'
+he geek suff
+To remove all the digits from the string, use
+
+$ echo "my username is 432234" | tr -d [:digit:]
+my username is
+
+Also, if you like to delete lines from file, you can use sed d command.
+
+6. Complement the sets using -c option
+You can complement the SET1 using -c option. For example, to remove all characters except digits, you can use the following.
+
+$ echo "my username is 432234" | tr -cd [:digit:]
+432234
+
+7. Remove all non-printable character from a file
+The following command can be used to remove all non-printable characters from a file.
+
+$ tr -cd [:print:] < file.txt
+
+8. Join all the lines in a file into a single line
+The below command will translate all newlines into spaces and make the result as a single line.
+
+$ tr -s '\n' ' ' < file.txt
  
  for more 
  https://www.thegeekstuff.com/2012/12/linux-tr-command/
