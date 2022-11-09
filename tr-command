@@ -1,0 +1,54 @@
+tr is an UNIX utility for translating, or deleting, or squeezing repeated characters. It will read from STDIN and write to STDOUT.
+
+tr stands for translate.
+
+Syntax
+The syntax of tr command is:
+
+$ tr [OPTION] SET1 [SET2]
+
+1.Convert lower case to upper case
+
+$ tr abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
+i/p = thegeekstuff
+o/p = THEGEEKSTUFF
+or
+$ tr [:lower:] [:upper:]
+i/p = thegeekstuff
+o/p = THEGEEKSTUFF
+or
+$ tr a-z A-Z
+i/p = thegeekstuff
+o/p =THEGEEKSTUFF
+
+2. Translate braces into parenthesis
+
+$ tr '{}' '()' < inputfile > outputfile
+
+3. Translate white-space to tabs
+
+$ echo "This is for testing" | tr [:space:] '\t'
+This	is	for	testing
+
+if there are two are more spaces present continuously, then the previous command will translate each spaces to a tab as follows.
+
+$ echo "This   is   for testing" | tr [:space:] '\t'
+This			is			for	testing
+
+We can use -s option to squeeze the repetition of characters.
+
+$ echo "This   is   for testing" | tr -s [:space:] '\t'
+This	is	for	testing
+
+Similarly we can convert multiple continuous spaces with a single space
+
+$ echo "This  is  for testing" | tr -s [:space:] ' '
+This is for testing
+ 
+ for more 
+ https://www.thegeekstuff.com/2012/12/linux-tr-command/
+ 
+
+
+
+
