@@ -9,3 +9,5 @@ example = head -n 3 = it will display first 3 lines
 example = head -c 6 = it will print first 6 characters
 -q = --quiet
 -v = --verbose = by using this option, data from the specified file is always preceded by its file name.
+ The head command can be piped with other commands.
+ -
