@@ -86,6 +86,48 @@ I love music of Kartik.
 /* all the duplicate lines 
 are displayed*/
 
+//using -u option//
+
+$uniq -u kt.txt
+Thanks.
+
+/*only unique lines are
+displayed*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
