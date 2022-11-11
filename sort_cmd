@@ -15,6 +15,12 @@ Sort Command Syntax:
 
 $ sort [-options]
 
+sort can also be extended in various powerful ways. The command can also be used for sorting tables of data, delimited by commas (csv) or tabs (tsv) or even spaces; on a particular column or field. The -k option helps sort the input file on a particular field, i.e. the column number. The -t option helps specify the delimiting character depending on the file format. 
+For example, we'd use:
+-t $'\t' for a tab delimited file    
+-t',' for a comma delimited file    
+-t'|' for a pipe delimited file 
+
 For example, here is a test file:
 
 $ cat test
