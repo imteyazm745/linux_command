@@ -156,39 +156,42 @@ that's why uniq treated all these
 as duplicates and gave output 
 accordingly*/
 
+Using -i option : It is used to make the comparison case-insensitive. 
 
+ 
 
+//displaying contents of f4.txt//
 
+$cat f4.txt
+I LOVE MUSIC
+i love music
+THANKS
 
+//using uniq command//
+$uniq f4.txt
+I LOVE MUSIC
+i love music
+THANKS
 
+/*the lines aren't treated
+as duplicates with simple 
+use of uniq*/
 
+//now using -i option//
 
+$uniq -i f4.txt
+I LOVE MUSIC
+THANKS
 
+/*now second line is removed
+when -i option is used*/
+9. Using -z option : By default, the output uniq produces is newline terminated. However, if you want, 
+you want to have a NULL terminated output instead (useful while dealing with uniq in scripts). This can be made possible using the -z command line option. 
 
+Syntax: 
+ 
 
+//syntax of using uniq
+with -z option//
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$uniq -z file-name
