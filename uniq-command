@@ -52,7 +52,7 @@ separate : Insert a blank line between each set of duplicated lines.
 – – version : It displays version information and exit.
 EXAMPLES:-
 
-//using uniq with -c//
+//using uniq with -c//  =  It tells the number of times a line was repeated. 
 
 $uniq -c kt.txt
 3 I love music.
@@ -65,7 +65,7 @@ $uniq -c kt.txt
 line its repeated number is
 displayed*/
 
-//using uniq with -d//
+//using uniq with -d// = It only prints the repeated lines.
 
 $uniq -d kt.txt
 I love music.
@@ -74,7 +74,7 @@ I love music of Kartik.
 /*it only displayed one
  duplicate line per group*/
 
-//using -D option//
+//using -D option// = It also prints only duplicate lines but not one per group. 
 
 $uniq -D kt.txt
 I love music.
@@ -86,13 +86,34 @@ I love music of Kartik.
 /* all the duplicate lines 
 are displayed*/
 
-//using -u option//
+//using -u option// = It prints only the unique lines.
 
 $uniq -u kt.txt
 Thanks.
 
 /*only unique lines are
 displayed*/
+
+ Using -f N option : As told above, this allows the N fields to be skipped while comparing the uniqueness of the lines.
+ 
+//displaying contents of f1.txt//
+
+$cat f1.txt
+1. I love music.
+2. I love music.
+3. I love music of Kartik.
+4. I love music of Kartik.
+
+//now using uniq with -f N option//
+
+$uniq -f 2 f1.txt
+1. I love music.
+3. I love music of Kartik.
+
+/*2 is used cause we needed to
+compare the lines after the
+numbering 1,2.. and after dots*/
+
 
 
 
