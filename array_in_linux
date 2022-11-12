@@ -18,6 +18,40 @@ $./arraymanip.sh
 Red hat
 To access an element from an array use curly brackets like ${name[index]}.
 
+# To declare static Array
+arr=(prakhar ankit 1 rishabh manish abhinav)
+ 
+# To print all elements of array
+echo ${arr[@]}      
+echo ${arr[*]}      
+echo ${arr[@]:0}   
+echo ${arr[*]:0}  
+
+o/p= 
+prakhar ankit 1 rishabh manish abhinav
+prakhar ankit 1 rishabh manish abhinav
+prakhar ankit 1 rishabh manish abhinav
+prakhar ankit 1 rishabh manish abhinav
+
+# To print first element
+echo ${arr[0]}       
+echo ${arr}
+
+Output:
+
+prakhar
+prakhar
+
+# To print particular element
+echo ${arr[3]}       
+echo ${arr[1]}
+
+Output:
+rishabh
+ankit
+
+
+
 2. Initializing an array during declaration
 Instead of initializing an each element of an array separately, you can declare and initialize an array by specifying the list of elements (separated by white space) with in a curly braces.
 
