@@ -1,3 +1,6 @@
+Types of Shell Variable
+1. Scalar Variable = each variable contains a single value.
+2. Array = single variable can store multiple values
 An array is a variable containing multiple values may be of same type or of different type.  There is no maximum limit to the size of an array, nor any requirement that member variables be indexed or assigned contiguously. Array index starts with zero.
 1. Declaring an Array and Assigning values
 In bash, array is created automatically when a variable is used in the format like,
