@@ -1,6 +1,23 @@
+GREP stands for Global Regular Expression Print.
+Syntax 1 :grep [options] pattern [files]
+Syntax 2 : cat filename | grep pattern
+
+grep filter used to search pattern in files.
+Example: 
+cat>grepfilter.txt // use to create and write somethin in a file
+Hello! Frieds 
+Welcome to UNIX / LINUX Commands 
+grep filter used to search pattern in files.  // to save and exit from the file press ctrl+d. 
+
+grep "UNIX" grepfilter.txt
+Welcome to UNIX / LINUX Commands
+
+cat grepfilter.txt | grep "LINUX"
+Welcome to UNIX / LINUX Commands 
+
 The grep filter searches a file for a particular pattern of characters, and displays all lines that contain that pattern. The pattern that is searched in the file is referred to as the regular expression (grep stands for global search for regular expression and print out). 
 Syntax: 
-grep [options] pattern [files]
+grep [options] pattern [files] OR cat filename | grep pattern
 
 Options Description
 -c : This prints only a count of the lines that match a pattern
