@@ -19,5 +19,20 @@ learn operating system.
 unix linux which one you choose.
 unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
 
+1. Replacing or substituting string : Sed command is mostly used to replace the text in a file. 
+The below simple sed command replaces the word “unix” with “linux” in the file.
+
+$sed 's/unix/linux/' file.txt
+Output :
+linux is great os. unix is opensource. unix is free os.
+learn operating system.
+linux linux which one you choose.
+linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+
+Here the “s” specifies the substitution operation. The “/” are delimiters. The “unix” is the search pattern and the “linux” is the replacement string.
+By default, the sed command replaces the first occurrence of the pattern in each line and it won’t replace the second, third…occurrence in the line.
+
+
+2. 
 
 
