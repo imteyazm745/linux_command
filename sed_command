@@ -54,6 +54,17 @@ linux linux which one you choose.
 linux is easy to learn.linux is a multiuser os.Learn linux .linux is a powerful.
 
 
+4. Replacing from nth occurrence to all occurrences in a line : Use the combination of /1, /2 etc and /g to replace all the patterns from the nth occurrence of a pattern in a line. 
+The following sed command replaces the third, fourth, fifth… “unix” word with “linux” word in a line.
+
+$sed 's/unix/linux/3g' geekfile.txt
+Output:
+unix is great os. unix is opensource. linux is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn linux .linux is a powerful.
+
+
 
 
 
