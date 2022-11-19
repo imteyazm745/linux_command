@@ -165,6 +165,5 @@ Output:
 ----------------------------------
 -i to search for a string case insensitively
 -R to recursively check all the files in the directory.
-
-
- 
+grep -v july filename
+The ‘-v’ option tells the grep to print the lines that do not contain the specified pattern.
