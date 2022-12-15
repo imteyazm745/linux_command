@@ -1,13 +1,16 @@
 Types of Shell Variable
 1. Scalar Variable = each variable contains a single value.
 2. Array = single variable can store multiple values
-An array is a variable containing multiple values may be of same type or of different type.  There is no maximum limit to the size of an array, nor any requirement that member variables be indexed or assigned contiguously. Array index starts with zero.
+An array is a variable containing multiple values may be of same type or of different type. 
+There is no maximum limit to the size of an array, nor any requirement that member variables 
+be indexed or assigned contiguously. Array index starts with zero.
 1. Declaring an Array and Assigning values
 In bash, array is created automatically when a variable is used in the format like,
 
 name[index]=value
 name is any name for an array
-index could be any number or expression that must evaluate to a number greater than or equal to zero.You can declare an explicit array using declare -a arrayname.
+index could be any number or expression that must evaluate to a number greater than or equal to zero.
+You can declare an explicit array using declare -a arrayname.
 $ cat arraymanip.sh
 #! /bin/bash
 Unix[0]='Debian'
@@ -54,9 +57,9 @@ rishabh
 ankit
 
 
-
 2. Initializing an array during declaration
-Instead of initializing an each element of an array separately, you can declare and initialize an array by specifying the list of elements (separated by white space) with in a curly braces.
+Instead of initializing an each element of an array separately, you can declare and initialize
+an array by specifying the list of elements (separated by white space) with in a curly braces.
 
 Syntax:
 declare -a arrayname=(element1 element2 element3)
@@ -68,14 +71,17 @@ declare -a Unix=('Debian' 'Red hat' 'Red hat' 'Suse' 'Fedora');
 declare -a declares an array and all the elements in the parentheses are the elements of an array.
 
 3. Print the Whole Bash Array
-There are different ways to print the whole elements of the array. If the index number is @ or *, all members of an array are referenced. You can traverse through the array elements and print it, using looping statements in bash.
+There are different ways to print the whole elements of the array.-
+ If the index number is @ or *, all members of an array are referenced.-
+ You can traverse through the array elements and print it, using looping statements in bash.
 
 echo ${Unix[@]}
 
 # Add the above echo statement into the arraymanip.sh
 #./t.sh
 Debian Red hat Ubuntu Suse
-Referring to the content of a member variable of an array without providing an index number is the same as referring to the content of the first element, the one referenced with index number zero.
+Referring to the content of a member variable of an array without providing an index number is-
+the same as referring to the content of the first element, the one referenced with index number zero.
 
 
 Examples :- 
@@ -123,5 +129,4 @@ echo ${arr[@]//a/A}        # prAkhAr Ankit 1 rishAbh mAnish AbhinAv
 echo ${arr[@]}            # prakhar ankit 1 rishabh manish abhinav
 echo ${arr[0]//r/R}        # pRakhaR
 
-
-
+Topic array
