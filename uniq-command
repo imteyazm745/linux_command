@@ -158,7 +158,6 @@ accordingly*/
 Using -i option : It is used to make the comparison case-insensitive. 
 
  
-
 //displaying contents of f4.txt//
 
 $cat f4.txt
