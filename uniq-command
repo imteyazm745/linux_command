@@ -37,7 +37,6 @@ The content in the file must be therefore sorted before using uniq or you can si
 
 Options For uniq Command: 
  
-
 -c – -count : It tells how many times a line was repeated by displaying a number as a prefix with the line.
 -d – -repeated : It only prints the repeated lines and not the lines which aren’t repeated.
 -D – -all-repeated[=METHOD] : It prints all duplicate lines and METHOD can be any of the following: 
